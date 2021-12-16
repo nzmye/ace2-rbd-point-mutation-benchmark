@@ -1,0 +1,47 @@
+[
+    {
+        "Names": "RBD_N501Y",
+        "Haddock": "1.90",
+        "Foldx": "3.03",
+        "Foldxwater": "6.28",
+        "Evoef1": "0.32",
+        "Mutabind2": "0.65",
+        "Ssipe": "-0.17"
+    },
+    {
+        "Names": "RBD_E484K",
+        "Haddock": "3.92",
+        "Foldx": "-0.14",
+        "Foldxwater": "-0.16",
+        "Evoef1": "-0.16",
+        "Mutabind2": "0.16",
+        "Ssipe": "0.95"
+    },
+    {
+        "Names": "RBD_S477N",
+        "Haddock": "1.61",
+        "Foldx": "0.04",
+        "Foldxwater": "0.04",
+        "Evoef1": "0.00",
+        "Mutabind2": "-0.11",
+        "Ssipe": "0.00"
+    },
+    {
+        "Names": "ACE2_D30A",
+        "Haddock": "9.32",
+        "Foldx": "1.47",
+        "Foldxwater": "1.50",
+        "Evoef1": "1.23",
+        "Mutabind2": "0.37",
+        "Ssipe": "0.85"
+    },
+    {
+        "Names": "ACE2_N330W",
+        "Haddock": "-3.45",
+        "Foldx": "-1.14",
+        "Foldxwater": "-0.97",
+        "Evoef1": "-1.45",
+        "Mutabind2": "0.54",
+        "Ssipe": "-0.86"
+    }
+]
