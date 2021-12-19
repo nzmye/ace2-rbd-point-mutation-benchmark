@@ -18,7 +18,7 @@ table = new Tabulator("#models-table", {
 
   // Formatting
   columns: [
-    {title:"Name", field:"Names", responsive: 0, widthGrow: 2, minWidth: 150},
+    {title:"Names", field:"Names", responsive: 0, widthGrow: 2, minWidth: 150},
     {
       title:"HADDOCK",
       field:"Haddock",
@@ -76,15 +76,21 @@ table = new Tabulator("#models-table", {
   // paginationSize: 10,  // model per page.
 
     // Callbacks
-  rowSelected:function(row){
-    let pdburl = "models/" + row.getData().url;
-    let pdbname = row.getData().name;
-    loadMolecule(stage, pdburl)
+ rowSelected:function(row){
+   
+   let pdbname = row.getData().column.title;
+   const myArray = pdbname.split("-");
+   let pdburl = "models/" + row.getData().Name + "/" + myArray[1] + "_ " + pdbname + ".pdb";
+    
+   loadMolecule(stage, pdburl)
   },
 
   rowDeselected:function(row){
-    let pdburl = "models/" + row.getData().url;
-    let pdbname = row.getData().name;
+
+    let pdbname = row.getData().column.title;
+    const myArray = pdbname.split("-");
+    let pdburl = "models/" + row.getData().Name + "/" + myArray[1] + "_ " + pdbname + ".pdb";
+
     removeMolecule(stage, pdburl)
   },
 
