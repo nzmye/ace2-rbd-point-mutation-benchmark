@@ -78,8 +78,7 @@ table = new Tabulator("#models-table", {
     // Callbacks
  rowSelected:function(row){
    
-   let pdbname = row.getData().column.title;
-   print(pdbname)
+   let pdbname = column.getData().title;
    const myArray = pdbname.split("-");
    let pdburl = "models/" + row.getData().Name + "/" + myArray[1] + "_ " + pdbname + ".pdb";
     
@@ -88,7 +87,7 @@ table = new Tabulator("#models-table", {
 
   rowDeselected:function(row){
 
-    let pdbname = row.getData().column.title;
+    let pdbname = column.getData().title;
     const myArray = pdbname.split("-");
     let pdburl = "models/" + row.getData().Name + "/" + myArray[1] + "_ " + pdbname + ".pdb";
 
