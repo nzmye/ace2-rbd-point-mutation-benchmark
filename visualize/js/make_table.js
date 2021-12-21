@@ -79,6 +79,7 @@ table = new Tabulator("#models-table", {
  rowSelected:function(row){
    
    let pdbname = row.getData().column.title;
+   print(pdbname)
    const myArray = pdbname.split("-");
    let pdburl = "models/" + row.getData().Name + "/" + myArray[1] + "_ " + pdbname + ".pdb";
     
