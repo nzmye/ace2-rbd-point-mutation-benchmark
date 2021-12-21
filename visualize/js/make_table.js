@@ -78,18 +78,18 @@ table = new Tabulator("#models-table", {
     // Callbacks
  rowSelected:function(row){
    
-   let pdbname = column.getData().title;
+   var cell = row.getCell(column);
    const myArray = pdbname.split("-");
-   let pdburl = "models/" + row.getData().Name + "/" + myArray[1] + "_ " + pdbname + ".pdb";
+   let pdburl = "models/" + row.getData().Name + "/" + myArray[1] + "_ " + cell + ".pdb";
     
    loadMolecule(stage, pdburl)
   },
 
   rowDeselected:function(row){
 
-    let pdbname = column.getData().title;
+    var cell = row.getCell(column);
     const myArray = pdbname.split("-");
-    let pdburl = "models/" + row.getData().Name + "/" + myArray[1] + "_ " + pdbname + ".pdb";
+    let pdburl = "models/" + row.getData().Name + "/" + myArray[1] + "_ " + cell + ".pdb";
 
     removeMolecule(stage, pdburl)
   },
