@@ -5,7 +5,7 @@ import csv
 
 def old_csv_to_new_csv(csvFilePath, newCsvFilePath):
     with open(csvFilePath, 'w') as f2:
-        fields = ['Names', 'Haddock', 'Foldx', 'Foldxwater', 'Evoef1', 'Mutabind2', 'Ssipe']
+        fields = ['Names', 'HADDOCK', 'FoldX', 'FoldXwater', 'EvoEF1', 'MutaBind2', 'SSIPe']
         writer=csv.DictWriter(f2,fieldnames=fields)
         writer.writeheader()
         with open( newCsvFilePath, mode='r') as infile:
@@ -16,12 +16,12 @@ def old_csv_to_new_csv(csvFilePath, newCsvFilePath):
                     print(rows)
                 else:
                     writer.writerow({'Names': str(rows[2]+"_"+rows[0]), 
-                                    'Haddock': rows[3],
-                                    'Foldx': rows[4],
-                                    'Foldxwater': rows[5],
-                                    'Evoef1': rows[6],
-                                    'Mutabind2': rows[7],
-                                    'Ssipe': rows[8]})
+                                    'HADDOCK': rows[3],
+                                    'FoldX': rows[4],
+                                    'FoldXwater': rows[5],
+                                    'EvoEF1': rows[6],
+                                    'MutaBind2': rows[7],
+                                    'SSIPe': rows[8]})
                     
         f2.close()
 
