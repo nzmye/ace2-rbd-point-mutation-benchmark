@@ -21,42 +21,42 @@ table = new Tabulator("#models-table", {
     {title:"Names", field:"Names", responsive: 0, widthGrow: 2, minWidth: 150},
     {
       title:"HADDOCK",
-      field:"Haddock",
+      field:"HADDOCK",
       description:"HADDOCK score. A prediction of how well the proteins interact. Lower scores mean stronger (better) interactions.",
       responsive: 0,
       minWidth: 100
     },
     {
       title:"FoldX",
-      field:"Foldx",
+      field:"FoldX",
       description:"Foldx score. A prediction of how well the proteins interact. Lower scores mean stronger (better) interactions.",
       responsive: 0,
       minWidth: 100
     },
     {
       title:"FoldXwater",
-      field:"Foldxwater",
+      field:"FoldXwater",
       description:"Foldxwater score. A prediction of how well the proteins interact. Lower scores mean stronger (better) interactions.",
       responsive: 0,
       minWidth: 100
     },
     {
       title:"EvoEF1",
-      field:"Evoef1",
+      field:"EvoEF1",
       description:"Evoef1 score. A prediction of how well the proteins interact. Lower scores mean stronger (better) interactions.",
       responsive: 0,
       minWidth: 100
     },
     {
       title:"MutaBind2",
-      field:"Mutabind2",
+      field:"MutaBind2",
       description:"Mutabind2 score. A prediction of how well the proteins interact. Lower scores mean stronger (better) interactions.",
       responsive: 0,
       minWidth: 100
     },
     {
       title:"SSIPe",
-      field:"Ssipe",
+      field:"SSIPe",
       description:"HADDOCK score. A prediction of how well the proteins interact. Lower scores mean stronger (better) interactions.",
       responsive: 0,
       minWidth: 100
