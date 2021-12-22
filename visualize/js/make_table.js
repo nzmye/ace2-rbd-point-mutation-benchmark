@@ -76,7 +76,7 @@ table = new Tabulator("#models-table", {
   // paginationSize: 10,  // model per page.
 
     // Callbacks
- rowSelected:function(row){
+ rowSelected:function(row, column){
    
    var cell = row.getCell(column);
    const myArray = pdbname.split("-");
@@ -85,7 +85,7 @@ table = new Tabulator("#models-table", {
    loadMolecule(stage, pdburl)
   },
 
-  rowDeselected:function(row){
+  rowDeselected: function (row, column){
 
     var cell = row.getCell(column);
     const myArray = pdbname.split("-");
