@@ -79,8 +79,10 @@ table = new Tabulator("#models-table", {
  rowSelected:function(row, column){
    
    var cell = row.getCell(column);
-   const myArray = pdbname.split("-");
-   let pdburl = "models/" + row.getData().Name + "/" + myArray[1] + "_ " + cell + ".pdb";
+   let modelname = row.getData().Name
+   const myArray = modelname.split("-");
+   let pdbname =  myArray[1] + "_ " + cell + ".pdb"
+   let pdburl = "models/" + modelname + "/" + pdbname;
     
    loadMolecule(stage, pdburl)
   },
@@ -88,9 +90,11 @@ table = new Tabulator("#models-table", {
   rowDeselected: function (row, column){
 
     var cell = row.getCell(column);
-    const myArray = pdbname.split("-");
-    let pdburl = "models/" + row.getData().Name + "/" + myArray[1] + "_ " + cell + ".pdb";
-
+    let modelname = row.getData().Name
+    const myArray = modelname.split("-");
+    let pdbname = myArray[1] + "_ " + cell + ".pdb"
+    let pdburl = "models/" + modelname + "/" + pdbname;
+    
     removeMolecule(stage, pdburl)
   },
 
