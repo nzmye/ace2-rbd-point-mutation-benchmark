@@ -80,7 +80,7 @@ table = new Tabulator("#models-table", {
    
    var cell = row.getCell(column);
    let modelname = row.getData().Name
-   console.log(modelname)
+   alert(modelname)
    const myArray = modelname.split("-");
    let pdbname =  myArray[1] + "_ " + cell + ".pdb"
    let pdburl = "models/" + modelname + "/" + pdbname;
@@ -92,12 +92,22 @@ table = new Tabulator("#models-table", {
 
     var cell = row.getCell(column);
     let modelname = row.getData().Name
-    console.log(modelname)
+    alert(modelname)
     const myArray = modelname.split("-");
     let pdbname = myArray[1] + "_ " + cell + ".pdb"
     let pdburl = "models/" + modelname + "/" + pdbname;
 
     removeMolecule(stage, pdburl)
+  },
+
+
+  rowClick: function (e, row) {
+    var data = row.getData(); //get data object for row
+
+    var cells = row.getCells();
+
+    alert("cell clicked - " + data + cells);
+
   },
 
 });
