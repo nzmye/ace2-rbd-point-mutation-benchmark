@@ -81,6 +81,7 @@ table = new Tabulator("#models-table", {
    var cell = row.getCell(column);
    let modelname = row.getData().Names
    alert(modelname)
+   alert(cell)
    const myArray = modelname.split("-");
    let pdbname =  myArray[1] + "_ " + cell + ".pdb"
    let pdburl = "models/" + modelname + "/" + pdbname;
@@ -92,6 +93,7 @@ table = new Tabulator("#models-table", {
 
     var cell = row.getCell(column);
     let modelname = row.getData().Names
+    alert(cell)
     alert(modelname)
     const myArray = modelname.split("-");
     let pdbname = myArray[1] + "_ " + cell + ".pdb"
