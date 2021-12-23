@@ -79,7 +79,7 @@ table = new Tabulator("#models-table", {
  rowSelected:function(row, column){
    
    var cell = row.getCell(column);
-   let modelname = row.getData().Name
+   let modelname = row.getData().Names
    alert(modelname)
    const myArray = modelname.split("-");
    let pdbname =  myArray[1] + "_ " + cell + ".pdb"
@@ -91,7 +91,7 @@ table = new Tabulator("#models-table", {
   rowDeselected: function (row, column){
 
     var cell = row.getCell(column);
-    let modelname = row.getData().Name
+    let modelname = row.getData().Names
     alert(modelname)
     const myArray = modelname.split("-");
     let pdbname = myArray[1] + "_ " + cell + ".pdb"
