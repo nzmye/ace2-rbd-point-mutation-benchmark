@@ -103,9 +103,10 @@ table = new Tabulator("#models-table", {
   }, */
 
   cellClick: function (e, cell) {
-    var column = cell.getColumn()
-    var row = cell.getRow()
-    alert(`The cell has a value of:${row.getData().Names}${column.getField()}${cell.getValue()}`); //display the cells value
+    var columnname = cell.getColumn().getValue()
+    var rowname = cell.getRow().getData().Names
+   // alert(`The cell has a value of:${row.getData().Names}${column.getField()}${cell.getValue()}`); //display the cells value
+    alert(`The cell has a value of:${rowname }${columnname }${cell.getValue()}`); //display the cells value
   },
   
 /*   rowClick: function (e, row) {
