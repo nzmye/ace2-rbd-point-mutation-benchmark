@@ -113,7 +113,7 @@ table = new Tabulator("#models-table", {
     let pdbname = myArray[1] + "_ " + columnname + ".pdb"
     let pdburl = "models/" + rowname + "/" + pdbname;
 
-    alert(`The cell has a url of:${myArray}`); //display the cells refer a url
+    alert(`The cell has a url of:${myArray[1]}`); //display the cells refer a url
 
     loadMolecule(stage, pdburl)
 
