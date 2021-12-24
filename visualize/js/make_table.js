@@ -104,7 +104,8 @@ table = new Tabulator("#models-table", {
 
   cellClick: function (e, cell) {
     var column = cell.getColumn()
-    alert("The cell has a value of:" + column.getField() + cell.getValue()); //display the cells value
+    var row = cell.getRow()
+    alert("The cell has a value of:" + row.getField() + column.getField() + cell.getValue()); //display the cells value
   },
   
 /*   rowClick: function (e, row) {
