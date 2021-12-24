@@ -102,6 +102,9 @@ table = new Tabulator("#models-table", {
     removeMolecule(stage, pdburl)
   },
 
+  columnMoved: function (column, columns) {
+    alert("The user has moved column: " + column.getField()); //display the columns field name
+  },
 
   rowClick: function (e, row) {
     var data = row.getData(); //get data object for row
