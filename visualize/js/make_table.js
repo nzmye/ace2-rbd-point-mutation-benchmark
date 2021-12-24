@@ -76,7 +76,7 @@ table = new Tabulator("#models-table", {
   // paginationSize: 10,  // model per page.
 
     // Callbacks
- rowSelected:function(row, column){
+/*  rowSelected:function(row, column){
    
    var cell = row.getCell(column);
    let modelname = row.getData().Names
@@ -88,31 +88,31 @@ table = new Tabulator("#models-table", {
     
    loadMolecule(stage, pdburl)
   },
-
-  rowDeselected: function (row, column){
+ */
+/*   rowDeselected: function (row, column){
 
     var cell = row.getCell(column);
     let modelname = row.getData().Names
-    alert(cells.title)
+    alert(cell)
     alert(modelname)
     const myArray = modelname.split("-");
     let pdbname = myArray[1] + "_ " + cell + ".pdb"
     let pdburl = "models/" + modelname + "/" + pdbname;
 
     removeMolecule(stage, pdburl)
-  },
+  }, */
 
-  columnMoved: function (column, columns) {
-    alert("The user has moved column: " + column.getField()); //display the columns field name
+  cellClick: function (e, cell) {
+    alert("The cell has a value of:" + cell.getValue()); //display the cells value
   },
-
-  rowClick: function (e, row) {
+  
+/*   rowClick: function (e, row) {
     var data = row.getData(); //get data object for row
 
     var cells = row.getCells();
 
-    alert("cell clicked - " + cells.column.getData().title);
+    alert("cell clicked - " + data + cells);
 
-  },
+  }, */
 
 });
