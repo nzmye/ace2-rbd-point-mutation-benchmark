@@ -93,7 +93,7 @@ table = new Tabulator("#models-table", {
 
     var cell = row.getCell(column);
     let modelname = row.getData().Names
-    alert(cell)
+    alert(cells.column.field)
     alert(modelname)
     const myArray = modelname.split("-");
     let pdbname = myArray[1] + "_ " + cell + ".pdb"
@@ -111,7 +111,7 @@ table = new Tabulator("#models-table", {
 
     var cells = row.getCells();
 
-    alert("cell clicked - " + data + cells);
+    alert("cell clicked - " + cells.column.field);
 
   },
 
