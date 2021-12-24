@@ -103,7 +103,7 @@ table = new Tabulator("#models-table", {
   }, */
 
   cellClick: function (e, cell) {
-    alert("The cell has a value of:" + cell.getValue()); //display the cells value
+    alert("The cell has a value of:" + cell.getColumn() + cell.getValue()); //display the cells value
   },
   
 /*   rowClick: function (e, row) {
