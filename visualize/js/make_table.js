@@ -106,12 +106,12 @@ table = new Tabulator("#models-table", {
     var columnname = cell.getColumn().getField()
     var rowname = cell.getRow().getData().Names
    // alert(`The cell has a value of:${row.getData().Names}${column.getField()}${cell.getValue()}`); //display the cells value
-    alert(`The cell has a value of:${rowname }${columnname }${cell.getValue()}`); //display the cells value
+    alert(`The cell has a value of:${rowname}${columnname}${cell.getValue()}`); //display the cells value
   
     let myArray = rowname.split("_");
     let modelname = rowname.replace("_", "-")
-    let pdbname = myArray[1] + "_ " + columnname + ".pdb"
-    let pdburl = "models/" + modelname + "/" + pdbname;
+    let pdbname = `${myArray[1]}_${columnname}.pdb` 
+    let pdburl = `models/${modelname}/${modelname}${pdbname}`
 
     alert(`The cell has a url of:${pdburl}`); //display the cells refer a url
 
