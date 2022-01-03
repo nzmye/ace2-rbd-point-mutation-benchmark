@@ -67,7 +67,7 @@ table = new Tabulator("#models-table", {
   // Layout
   layout:"fitColumns",
   resizableColumns: false,
-  selectable: true,
+  selectable: false,
   columnHeaderVertAlign: "bottom", //align header contents to bottom of cell
   responsiveLayout: "hide",
 
@@ -103,6 +103,7 @@ table = new Tabulator("#models-table", {
   }, */
 
   cellClick: function (e, cell) {
+
     var columnname = cell.getColumn().getField()
     var rowname = cell.getRow().getData().Names
    // alert(`The cell has a value of:${row.getData().Names}${column.getField()}${cell.getValue()}`); //display the cells value
