@@ -18,7 +18,7 @@ table = new Tabulator("#models-table", {
 
   // Formatting
   columns: [
-    {title:"Names", field:"Names", responsive: 0, widthGrow: 2, minWidth: 150},
+    {title:"Mutation Position", field:"Names", responsive: 0, widthGrow: 2, minWidth: 150},
     {
       title:"HADDOCK",
       field:"HADDOCK",

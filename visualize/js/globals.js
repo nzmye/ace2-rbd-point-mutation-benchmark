@@ -2,4 +2,4 @@
 
 let stage;
 let table;
-let reference = 'models/reference/6M0J_chains_AE.pdb';
+let reference = 'models/reference/6m0j_reference.pdb';

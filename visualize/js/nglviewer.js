@@ -47,7 +47,7 @@ let schemeId = NGL.ColormakerRegistry.addScheme( function( params ){
         else if (atom.element == 'C' && atom.chainname == 'A'){
           return 0xEBF5FB;
         }
-        else if (atom.element == 'C' && atom.chainname == 'B'){
+        else if (atom.element == 'C' && atom.chainname == 'E'){
           return 0xC5F1C5;
         }
         else {
@@ -80,7 +80,7 @@ function selectInterface(c) {
   let neighborsB;
 
   // neighbors of B belonging to A
-  nglsele = new NGL.Selection(":B");
+  nglsele = new NGL.Selection(":E");
   neighborsB = c.structure.getAtomSetWithinSelection(nglsele, radius);
   neighborsB = c.structure.getAtomSetWithinGroup(neighborsB);
   selection += "((" + neighborsB.toSeleString() + ") and :A)"
@@ -88,7 +88,7 @@ function selectInterface(c) {
   nglsele = new NGL.Selection(":A");
   neighborsA = c.structure.getAtomSetWithinSelection(nglsele, radius);
   neighborsA = c.structure.getAtomSetWithinGroup(neighborsA);
-  selection += "or ((" + neighborsA.toSeleString() + ") and :B)"
+  selection += "or ((" + neighborsA.toSeleString() + ") and :E)"
 
   return selection
 
