@@ -71,7 +71,7 @@ table = new Tabulator("#models-table", {
   ],
 
   // Layout
-  layout:"fitColumns",
+  layout:"fitData",
   resizableColumns: false,
   selectable: true,
   columnHeaderVertAlign: "bottom", //align header contents to bottom of cell
