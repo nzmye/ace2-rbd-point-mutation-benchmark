@@ -73,7 +73,7 @@ table = new Tabulator("#models-table", {
   // Layout
   layout:"fitColumns",
   resizableColumns: false,
-  selectable: false,
+  selectable: true,
   columnHeaderVertAlign: "bottom", //align header contents to bottom of cell
   responsiveLayout: "hide",
   
@@ -109,8 +109,12 @@ table = new Tabulator("#models-table", {
     removeMolecule(stage, pdburl)
   }, */
 
-  cellClick: function (e, cell) {
 
+
+
+
+  cellClick: function (e, cell) {
+    
     var columnname = cell.getColumn().getField()
     var rowname = cell.getRow().getData().Names
    // alert(`The cell has a value of:${row.getData().Names}${column.getField()}${cell.getValue()}`); //display the cells value
@@ -122,7 +126,6 @@ table = new Tabulator("#models-table", {
     let pdburl = `models/${modelname}/${pdbname}`
 
     //alert(`The cell has a url of:${pdburl}`); //display the cells refer a url
-    cell.toggleSelect();
     loadMolecule(stage, pdburl)
 
   
