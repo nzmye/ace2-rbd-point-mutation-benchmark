@@ -18,7 +18,13 @@ table = new Tabulator("#models-table", {
 
   // Formatting
   columns: [
-    { title: "Mutation Position", field:"Names", responsive: 0, widthGrow: 2, minWidth: 150},
+    { 
+     title: "Mutation Position",
+     field:"Names",
+     responsive: 0,
+     widthGrow: 2,
+     minWidth: 150
+    },
     {
       title:"HADDOCK",
       field:"HADDOCK",
@@ -70,6 +76,7 @@ table = new Tabulator("#models-table", {
   selectable: false,
   columnHeaderVertAlign: "bottom", //align header contents to bottom of cell
   responsiveLayout: "hide",
+  
 
   tooltipsHeader: getTooltip,
   // pagination: "local",
@@ -115,7 +122,7 @@ table = new Tabulator("#models-table", {
     let pdburl = `models/${modelname}/${pdbname}`
 
     //alert(`The cell has a url of:${pdburl}`); //display the cells refer a url
-
+    cell.toggleSelect();
     loadMolecule(stage, pdburl)
 
   
