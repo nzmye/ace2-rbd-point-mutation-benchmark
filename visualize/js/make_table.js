@@ -113,8 +113,8 @@ table = new Tabulator("#models-table", {
   
 
 
-  cellClick: function (e, cell) {
-    e.selectable = true
+  cellSelected: function (e, cell) {
+  
     var columnname = cell.getColumn().getField()
     var rowname = cell.getRow().getData().Names
    // alert(`The cell has a value of:${row.getData().Names}${column.getField()}${cell.getValue()}`); //display the cells value
