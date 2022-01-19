@@ -125,8 +125,6 @@ table = new Tabulator("#models-table", {
     let pdbname = `${myArray[1]}_${columnname}.pdb` 
     let pdburl = `models/${modelname}/${pdbname}`
 
-    cell.toggleSelect()
-
     //alert(`The cell has a url of:${pdburl}`); //display the cells refer a url
     loadMolecule(stage, pdburl)
 
