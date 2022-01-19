@@ -7,13 +7,6 @@ let getTooltip = function(column){
   return false
 }
 
-function paramLookup(cell) {
-  //cell - the cell component
-
-  //do some processing and return the param object
-  return { param1: "green" };
-}
-
 
 table = new Tabulator("#models-table", {
 
@@ -32,7 +25,6 @@ table = new Tabulator("#models-table", {
      responsive: 0,
      widthGrow: 2,
      minWidth: 150,
-    cellClick: function (e, cell) { alert("Printing row data for: " + cell.getRow().getData().name) }
     },
     {
       title:"HADDOCK",
@@ -132,6 +124,8 @@ table = new Tabulator("#models-table", {
     let modelname = rowname.replace("_", "-")
     let pdbname = `${myArray[1]}_${columnname}.pdb` 
     let pdburl = `models/${modelname}/${pdbname}`
+
+    cell.toggleSelect()
 
     //alert(`The cell has a url of:${pdburl}`); //display the cells refer a url
     loadMolecule(stage, pdburl)
