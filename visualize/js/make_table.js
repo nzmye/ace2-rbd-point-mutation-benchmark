@@ -32,8 +32,7 @@ table = new Tabulator("#models-table", {
      responsive: 0,
      widthGrow: 2,
      minWidth: 150,
-     formatterParams: paramLookup
-     
+    cellClick: function (e, cell) { alert("Printing row data for: " + cell.getRow().getData().name) }
     },
     {
       title:"HADDOCK",
