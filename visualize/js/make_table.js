@@ -7,6 +7,14 @@ let getTooltip = function(column){
   return false
 }
 
+function paramLookup(cell) {
+  //cell - the cell component
+
+  //do some processing and return the param object
+  return { param1: "green" };
+}
+
+
 table = new Tabulator("#models-table", {
 
   // Data
@@ -23,7 +31,9 @@ table = new Tabulator("#models-table", {
      field:"Names",
      responsive: 0,
      widthGrow: 2,
-     minWidth: 150
+     minWidth: 150,
+     formatterParams: paramLookup
+     
     },
     {
       title:"HADDOCK",
@@ -111,13 +121,6 @@ table = new Tabulator("#models-table", {
 
 
   
-  columnFormatter: function (column) {
-    var data = column.getData(); //get data object for row
-
-    if (data.col == "Mutation Position") {
-      column.getElement().style.backgroundColor = "#A6A6DF"; //apply css change to row element
-    }
-  },
 
   cellClick: function (e, cell) {
   
