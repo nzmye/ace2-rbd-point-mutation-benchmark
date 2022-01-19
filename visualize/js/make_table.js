@@ -111,11 +111,11 @@ table = new Tabulator("#models-table", {
 
 
   
-  rowFormatter: function (row) {
-    var data = row.getData(); //get data object for row
+  columnFormatter: function (column) {
+    var data = column.getData(); //get data object for row
 
     if (data.col == "Mutation Position") {
-      row.getElement().style.backgroundColor = "#A6A6DF"; //apply css change to row element
+      column.getElement().style.backgroundColor = "#A6A6DF"; //apply css change to row element
     }
   },
 
