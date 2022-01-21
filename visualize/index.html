@@ -54,15 +54,18 @@
           </button>
         </div>
         <div class="modal-body">
-          SARS-CoV-2 uses its spike protein (S) to interact with host cells, through their ACE2 receptor protein. The viewer above shows a 3D structure of human ACE2
-          bound to the SARS-CoV-2 Spike protein (S). ACE2 is shown in light gray, while S is shown in light green. Atomic elements are colored individually.
+          SARS-CoV-2 infection cycle is initiated upon binding of Receptor Binding Domain (RBD) of SARS-CoV-2 Spike protein to the host Angiotensin Converting Enzyme 2 (ACE2) enzyme. 
+          Therefore, understanding how the interface of RBD and ACE2 complex is changing upon a mutation on RBD or ACE2 has been of great interest to the biology community. For this, we benchmarked the prediction capacity of well-known structure-based binding affinity predictors: HADDOCK, FoldX, EvoEF1, SSIPe, and MutaBind2.
           <br>
-          Each model represents a variant of human ACE2 bound to RBD. The models were refined using the docking software HADDOCK. You can load multiple models
-          by clicking the rows in the table below. The score in each row represents how strongly the proteins are predicted to interact, where a lower score means
-          a stronger interaction.
-          <br>
-          Clicking on "Show Contacts" displays the chemical interactions between the atoms of the loaded models as dashes.
-          <br>
+          The mutation information is given on the first column of the table. For example, for RBD_N501Y mutation, N501 of RBD is mutated to Y.
+          All predictor scores and the corresponding models are given in each cell respectively.
+          The scores represent how strongly the proteins are predicted to interact, where a lower score means a stronger interaction.
+          Since all predictors have different scoring functions, each predictor can be compared only within itself.
+          On the model screen, ACE2 is shown in light blue, while S is shown in orange. 
+          Reference is the crystal structure of RBD and ACE2 complex (pdb id: 6M0J). 
+          <br> 
+          To show or hide reference, please click on “Show Reference/Hide Reference”. To highlight the mutation positions, please click on “Highlight Mutations”.
+          To show the chemical interactions between the atoms of the models, please click on “Show Contacts”.          <br>
           <strong>Keep in mind that these are simplistic models and that there is very limited information you can draw from them.</strong>
         </div>
         <div class="modal-footer">

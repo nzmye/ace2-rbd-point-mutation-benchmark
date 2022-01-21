@@ -177,9 +177,12 @@ function highlightMutations() {
       nmut++;
     }
 
-    if (nmut > 0) {
+    if (nmut > 0){
       let atomsele = ':A and (' + mutations + ') and .CA';
-
+      if (tokens[1] == "RBD"){
+       atomsele = ':A and (' + mutations + ') and .CA';
+      } 
+    
       c.addRepresentation(
         'spacefill',
         {
