@@ -111,9 +111,23 @@ table = new Tabulator("#models-table", {
   }, */
 
 
-  
+  selectableCheck: function (cell) {
+    var columnname = cell.getColumn().getField()
+    var rowname = cell.getRow().getData().Names
+    // alert(`The cell has a value of:${row.getData().Names}${column.getField()}${cell.getValue()}`); //display the cells value
+    //alert(`The cell has a value of:${rowname}${columnname}${cell.getValue()}`); //display the cells value
 
-  cellClick: function (e, cell) {
+    let myArray = rowname.split("_");
+    let modelname = rowname.replace("_", "-")
+    let pdbname = `${myArray[1]}_${columnname}.pdb`
+    let pdburl = `models/${modelname}/${pdbname}`
+
+    //alert(`The cell has a url of:${pdburl}`); //display the cells refer a url
+    loadMolecule(stage, pdburl)
+
+  },
+
+ /*  cellClick: function (e, cell) {
   
     var columnname = cell.getColumn().getField()
     var rowname = cell.getRow().getData().Names
@@ -129,7 +143,7 @@ table = new Tabulator("#models-table", {
     loadMolecule(stage, pdburl)
 
   
-  },
+  }, */
   
 /*   rowClick: function (e, row) {
     var data = row.getData(); //get data object for row
