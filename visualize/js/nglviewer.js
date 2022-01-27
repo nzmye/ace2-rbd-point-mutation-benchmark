@@ -77,7 +77,7 @@ function selectInterface(c) {
   let radius = 5.0;
   let selection = '';
   let neighborsE;
-  //let neighborsB;
+  let neighborsA;
 
   // neighbors of B belonging to A
   nglsele = new NGL.Selection(":E");
@@ -98,7 +98,7 @@ function selectInterface(c) {
 function loadMolecule(stage, model) {
     
     let components = stage.compList;
-    alert(components)
+   // alert(components)
     component = stage.loadFile(
       model,
       { ext: "pdb" }
@@ -179,7 +179,7 @@ function highlightMutations() {
 
     if (nmut > 0){
       let atomsele = ':A and (' + mutations + ') and .CA';
-      alert(tokens)
+      //alert(tokens)
       if (tokens[1] == "RBD"){
        atomsele = ':E and (' + mutations + ') and .CA';
       } 

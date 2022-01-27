@@ -124,7 +124,7 @@ table = new Tabulator("#models-table", {
     let pdburl = `models/${modelname}/${pdbname}`
 
     //alert(`The cell has a url of:${pdburl}`); //display the cells refer a url
-     loadMolecule(rowname, pdburl)
+     loadMolecule(stage, pdburl)
 
   
   },
