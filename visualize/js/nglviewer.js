@@ -45,10 +45,10 @@ let schemeId = NGL.ColormakerRegistry.addScheme( function( params ){
           return 0xffb347;
         }
         else if (atom.element == 'C' && atom.chainname == 'A'){
-          return 0xEBF5FB;
+          return 0xADD8E6;
         }
         else if (atom.element == 'C' && atom.chainname == 'E'){
-          return 0xC5F1C5;
+          return 0xFF7B00;
         }
         else {
             return 0xFFFFFF;
@@ -77,13 +77,13 @@ function selectInterface(c) {
   let radius = 5.0;
   let selection = '';
   let neighborsE;
-  let neighborsB;
+  //let neighborsB;
 
   // neighbors of B belonging to A
   nglsele = new NGL.Selection(":E");
-  neighborsB = c.structure.getAtomSetWithinSelection(nglsele, radius);
-  neighborsB = c.structure.getAtomSetWithinGroup(neighborsB);
-  selection += "((" + neighborsB.toSeleString() + ") and :A)"
+  neighborsE = c.structure.getAtomSetWithinSelection(nglsele, radius);
+  neighborsE = c.structure.getAtomSetWithinGroup(neighborsE);
+  selection += "((" + neighborsE.toSeleString() + ") and :A)"
 
   nglsele = new NGL.Selection(":A");
   neighborsA = c.structure.getAtomSetWithinSelection(nglsele, radius);
@@ -179,8 +179,9 @@ function highlightMutations() {
 
     if (nmut > 0){
       let atomsele = ':A and (' + mutations + ') and .CA';
+      alert(tokens[1])
       if (tokens[1] == "RBD"){
-       atomsele = ':A and (' + mutations + ') and .CA';
+       atomsele = ':E and (' + mutations + ') and .CA';
       } 
     
       c.addRepresentation(
