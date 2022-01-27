@@ -179,7 +179,7 @@ function highlightMutations() {
 
     if (nmut > 0){
       let atomsele = ':A and (' + mutations + ') and .CA';
-      alert(tokens[1])
+      alert(tokens)
       if (tokens[1] == "RBD"){
        atomsele = ':E and (' + mutations + ') and .CA';
       } 
