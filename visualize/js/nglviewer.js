@@ -96,7 +96,7 @@ function selectInterface(c) {
 
 // Load molecule function
 function loadMolecule(stage, model) {
-
+    alert(stage)
     let components = stage.compList;
 
     component = stage.loadFile(
