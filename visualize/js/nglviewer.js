@@ -96,9 +96,9 @@ function selectInterface(c) {
 
 // Load molecule function
 function loadMolecule(stage, model) {
-    alert(stage)
+    
     let components = stage.compList;
-
+    alert(components)
     component = stage.loadFile(
       model,
       { ext: "pdb" }
