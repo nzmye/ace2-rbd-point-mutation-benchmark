@@ -11,10 +11,10 @@ let getTooltip = function(column){
 table = new Tabulator("#models-table", {
 
   // Data
-  //ajaxURL: "models/models.json",
-  ajaxURL: "https://drive.google.com/file/d/1DwWqp38A_26vrN92SoAJ8aR8zhhSonek/view?usp=sharing",
+  ajaxURL: "models/models.json",
+  //ajaxURL: "https://drive.google.com/file/d/1DwWqp38A_26vrN92SoAJ8aR8zhhSonek/view?usp=sharing",
   ajaxContentType: "json",
-  ajaxConfig:"POST",
+  //ajaxConfig:"POST",
   ajaxResponse: function(url, params, response){
     return response;
   },
@@ -129,6 +129,24 @@ table = new Tabulator("#models-table", {
      loadMolecule(stage, pdburl)
 
   
+  },
+
+  cellDblClick: function (e, cell) {
+
+    var columnname = cell.getColumn().getField()
+    var rowname = cell.getRow().getData().Names
+    // alert(`The cell has a value of:${row.getData().Names}${column.getField()}${cell.getValue()}`); //display the cells value
+    //alert(`The cell has a value of:${rowname}${columnname}${cell.getValue()}`); //display the cells value
+
+    let myArray = rowname.split("_");
+    let modelname = rowname.replace("_", "-")
+    let pdbname = `${myArray[1]}_${columnname}.pdb`
+    let pdburl = `models/${modelname}/${pdbname}`
+
+    //alert(`The cell has a url of:${pdburl}`); //display the cells refer a url
+    removeMolecule(stage, pdburl)
+
+
   },
   
 /*   rowClick: function (e, row) {
