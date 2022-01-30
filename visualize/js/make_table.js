@@ -14,6 +14,7 @@ table = new Tabulator("#models-table", {
   //ajaxURL: "models/models.json",
   ajaxURL: "https://drive.google.com/file/d/1DwWqp38A_26vrN92SoAJ8aR8zhhSonek/view?usp=sharing",
   ajaxContentType: "json",
+  ajaxConfig:"POST",
   ajaxResponse: function(url, params, response){
     return response;
   },
