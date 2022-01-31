@@ -170,6 +170,7 @@ function highlightMutations() {
    
     let nmut = 0;
     for (let t = 1; t < tokens.length; t++ ){  // skip first
+      alert(tokens[t])
       let number = tokens[t].replace(/\D/g,'');
       alert(number)
       if (!number) {
