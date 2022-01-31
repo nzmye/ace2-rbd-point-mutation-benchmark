@@ -74,7 +74,7 @@ let mutSchemeId = NGL.ColormakerRegistry.addScheme( function( params ){
 function selectInterface(c) {
   // Because NGL is incredibly clutsy, we have to do this..
 
-  let radius = 5.0;
+  let radius = 10.0;
   let selection = '';
   let neighborsE;
   let neighborsA;
