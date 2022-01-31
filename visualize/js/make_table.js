@@ -131,7 +131,7 @@ table = new Tabulator("#models-table", {
   
   },
 
-  cellTap: function (e, cell) {
+  cellContext: function (e, cell) {
 
     var columnname = cell.getColumn().getField()
     var rowname = cell.getRow().getData().Names
