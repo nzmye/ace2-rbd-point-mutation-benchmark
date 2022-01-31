@@ -167,7 +167,7 @@ function highlightMutations() {
 
     let modelName = c.object.name;
     let tokens = modelName.split('_');
-   // alert(tokens[0])
+   
     let nmut = 0;
     for (let t = 1; t < tokens.length; t++ ){  // skip first
       let number = tokens[t].replace(/\D/g,'');
@@ -183,8 +183,9 @@ function highlightMutations() {
       // RBD -> E484K | N501Y | S477N
       if (tokens[1] == "E484K" | tokens[1] == "N501Y" | tokens[1] == "S477N" ){
        atomsele = ':E and (' + mutations + ') and .CA';
+       
       } 
-    
+      alert(atomsele)
       c.addRepresentation(
         'spacefill',
         {
