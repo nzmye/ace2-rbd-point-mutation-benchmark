@@ -166,8 +166,8 @@ function highlightMutations() {
     let mutations = "";
 
     let modelName = c.object.name;
-    alert(modelName)
     let tokens = modelName.split('_');
+    alert(tokens[0])
     let nmut = 0;
     for (let t = 1; t < tokens.length; t++ ){  // skip first
       let number = tokens[t].replace(/\D/g,'');
