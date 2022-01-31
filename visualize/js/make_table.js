@@ -124,7 +124,7 @@ table = new Tabulator("#models-table", {
     let modelname = rowname.replace("_", "-")
     let pdbname = `${myArray[1]}_${columnname}.pdb` 
     let pdburl = `models/${modelname}/${pdbname}`
-    cell.getElement().update("highlight", { color: '#329cff' }, 3000)
+    cell.getElement().style.backgroundColor = "#e68a00";
     //alert(`The cell has a url of:${pdburl}`); //display the cells refer a url
      loadMolecule(stage, pdburl)
 
@@ -142,7 +142,7 @@ table = new Tabulator("#models-table", {
     let modelname = rowname.replace("_", "-")
     let pdbname = `${myArray[1]}_${columnname}.pdb`
     let pdburl = `models/${modelname}/${pdbname}`
-    cell.getElement().update("highlight", { color: '#000000' }, 3000)
+    cell.getElement().style.backgroundColor = "#00000";
     //alert(`The cell has a url of:${pdburl}`); //display the cells refer a url
     removeMolecule(stage, pdburl)
 
