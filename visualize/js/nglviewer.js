@@ -169,7 +169,7 @@ function highlightMutations() {
     let tokens = modelName.split('_');
    
     let nmut = 0;
-    for (let t = 1; t < tokens.length; t++ ){  // skip first
+    for (let t = 0; t < tokens.length-1; t++ ){  // skip first
       alert(tokens[t])
       let number = tokens[t].replace(/\D/g,'');
       alert(number)
@@ -183,7 +183,7 @@ function highlightMutations() {
     if (nmut > 0){
       let atomsele = ':A and (' + mutations + ') and .CA';
       // RBD -> E484K | N501Y | S477N
-      if (tokens[1] == "E484K" | tokens[1] == "N501Y" | tokens[1] == "S477N" ){
+      if (tokens[0] == "E484K" | tokens[0] == "N501Y" | tokens[0] == "S477N" ){
        atomsele = ':E and (' + mutations + ') and .CA';
        
       } 
