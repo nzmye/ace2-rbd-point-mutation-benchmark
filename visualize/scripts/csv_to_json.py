@@ -3,12 +3,13 @@ import json
 import pathlib
 import csv
 
-def old_csv_to_new_csv(csvFilePath, newCsvFilePath):
-    with open(csvFilePath, 'w') as f2:
+
+def old_csv_to_new_csv(oldCsvFilePath, newCsvFilePath):
+    with open(newCsvFilePath, 'w') as f2:
         fields = ['Names', 'HADDOCK', 'FoldX', 'FoldXwater', 'EvoEF1', 'MutaBind2', 'SSIPe']
         writer=csv.DictWriter(f2,fieldnames=fields)
         writer.writeheader()
-        with open( newCsvFilePath, mode='r') as infile:
+        with open(oldCsvFilePath, mode='r') as infile:
             reader = csv.reader(infile)
             for i,rows in enumerate(reader):
                 if i == 0:
@@ -46,8 +47,8 @@ def csv_to_json(csvFilePath, jsonFilePath):
 
 
 
-oldCsvFilePath = r'/home/nazmiye/Desktop/ibg/ace2-rbd-point-mutation-benchmark/visualize/models/ace2_rbd_example_models.csv'
-csvFilePath = r'/home/nazmiye/Desktop/ibg/ace2-rbd-point-mutation-benchmark/visualize/models/newfilename.csv'
-jsonFilePath = r'/home/nazmiye/Desktop/ibg/ace2-rbd-point-mutation-benchmark/visualize/models/models.json'
-old_csv_to_new_csv(oldCsvFilePath, csvFilePath)
-csv_to_json(csvFilePath, jsonFilePath)
+oldCsvFilePath ='C:\\Users\\nzmye\\Documents\\Projects\\ace2-rbd-point-mutation-benchmark\\visualize\\models\\SARS-CoV-2-RBD_ACE2_benchmarking_dataset.csv'
+newCsvFilePath = 'C:\\Users\\nzmye\\Documents\\Projects\\ace2-rbd-point-mutation-benchmark\\visualize\\models\\SARS-CoV-2-RBD_ACE2_benchmarking_dataset_newFormat.csv'
+jsonFilePath = 'C:\\Users\\nzmye\\Documents\\Projects\\ace2-rbd-point-mutation-benchmark\\visualize\\models\\models.json'
+old_csv_to_new_csv(oldCsvFilePath, newCsvFilePath)
+csv_to_json(newCsvFilePath, jsonFilePath)
