@@ -170,10 +170,10 @@ function highlightMutations() {
    
     let nmut = 0;
     for (let t = 0; t < tokens.length-1; t++ ){  // skip first
-      alert(tokens[t])
+      //alert(tokens[t])
       if(tokens[t] != "6m0j"){
         let number = tokens[t].replace(/\D/g, '');
-        alert(number)
+        //alert(number)
         if (!number) {
           continue
         }
@@ -189,7 +189,7 @@ function highlightMutations() {
        atomsele = ':E and (' + mutations + ') and .CA';
        
       } 
-      alert(atomsele)
+     // alert(atomsele)
       c.addRepresentation(
         'spacefill',
         {
