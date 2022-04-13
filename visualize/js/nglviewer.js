@@ -169,16 +169,18 @@ function highlightMutations() {
     let tokens = modelName.split('_');
    
     let nmut = 0;
-    for (let t = 1; t < tokens.length-1; t++ ){  // skip first
+    for (let t = 0; t < tokens.length-1; t++ ){  // skip first
       alert(tokens[t])
-      let number = tokens[t].replace(/\D/g,'');
-      alert(number)
-      if (!number) {
-        continue
+      if(tokens[t] != "6m0j"){
+        let number = tokens[t].replace(/\D/g, '');
+        alert(number)
+        if (!number) {
+          continue
+        }
+        mutations = mutations + ' ' + number;
+        nmut++;
       }
-      mutations = mutations + ' ' + number;
-      nmut++;
-    }
+      }
 
     if (nmut > 0){
       let atomsele = ':A and (' + mutations + ') and .CA';
