@@ -123,7 +123,7 @@ table = new Tabulator("#models-table", {
     let myArray = rowname.split("_");
     let modelname = rowname.replace("_", "-")
     let pdbname = `${myArray[1]}_${columnname}.pdb` 
-     let pdburl = `https://github.com/CSB-KaracaLab/ace2-rbd-point-mutation-benchmark/tree/main/SARS_CoV-2-generated_mutant_models/${modelname}/${pdbname}`
+    let pdburl = `models/${modelname}/${pdbname}`
     cell.getElement().style.backgroundColor = "#e68a00";
     //alert(`The cell has a url of:${pdburl}`); //display the cells refer a url
      loadMolecule(stage, pdburl)
@@ -139,7 +139,7 @@ table = new Tabulator("#models-table", {
     let myArray = rowname.split("_");
     let modelname = rowname.replace("_", "-")
     let pdbname = `${myArray[1]}_${columnname}.pdb`
-    let pdburl = `https://github.com/CSB-KaracaLab/ace2-rbd-point-mutation-benchmark/tree/main/SARS_CoV-2-generated_mutant_models/${modelname}/${pdbname}`
+    let pdburl = `models/${modelname}/${pdbname}`
     cell.getElement().style.backgroundColor = "#FFFFFF";
     //alert(`The cell has a url of:${pdburl}`); //display the cells refer a url
     removeMolecule(stage, pdburl)
