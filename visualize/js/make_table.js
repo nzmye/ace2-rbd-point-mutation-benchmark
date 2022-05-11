@@ -27,6 +27,7 @@ table = new Tabulator("#models-table", {
      responsive: 0,
      widthGrow: 2,
      minWidth: 150,
+     selectable: false
     },
     {
       title:"HADDOCK",
